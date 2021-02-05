@@ -1,0 +1,40 @@
+<div class="p-header">
+    <h1 class="text-center">Stock Orders</h1>
+</div>
+
+<div class="container">
+    <div>
+        <table>
+            <tr>
+                <td><label for="fname">Product ID:</label></td>
+                <td><input type="text" (input)='addid($event)'></td>
+            </tr>
+            <tr>
+                <td> <label for="lname">productName</label></td>
+                <td> <input type="text" (input)='addname($event)'></td>
+            </tr>
+            <tr>
+                <td><label for="lname">productPrice</label></td>
+                <td> <input type="number" (input)='addprice($event)'></td>
+            </tr>
+            <tr>
+                <td><label for="lname">inventoryQuantity</label></td>
+                <td><input type="number" (input)='additem($event)'></td>
+            </tr>
+            <tr>
+                <td><label for="lname">category</label></td>
+                <td> <input type="text" (input)='store($event)'>
+                    <button type="button" class="btn btn-primary btn-sm" (click)='addcat()'>Add category</button></td>
+            </tr>
+            <tr>
+                <td> <label for="lname">productDescription</label></td>
+                <td> <input type="text" (input)='adddes($event)'></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Uplode Product Image</label></td>
+                <td> <input type="file" name='Imagefile' id='Imagesid' (change)='onadd($event)' /></td>
+            </tr>
+        </table>
+        <button class="btn green" (click)='placeorder()'>Place new order</button>
+    </div>
+</div>
